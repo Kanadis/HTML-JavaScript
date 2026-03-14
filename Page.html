@@ -5,22 +5,24 @@
   </head>
   <body>
     <form>
-      <div>
+      <div id="step1">
         <label for="Name">Nama :</label>
         <input type="text" id="Name" placeholder="Masukkan Nama" />
-      </div>
-
-      <br />
-
-      <div>
+        <br />
         <label for="JmlPilihan">Jumlah Pilihan :</label>
-        <input type="number" name="" class="number-spinner" min="1" />
+        <input type="number" id="jmlPilihan" class="number-spinner" min="1" />
       </div>
 
       <br />
 
+      <div id="step2"></div>
+
+      <br />
+
+      <div id="step3"></div>
+
       <div>
-        <button type="ok">OK</button>
+        <button type="button" onclick="inputOk()">OK</button>
       </div>
 
       <script src="Script.js"></script>

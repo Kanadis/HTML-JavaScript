@@ -83,6 +83,7 @@ function checkList() {
   for (let i = 0; i < pilihan.length; i++) {
     const radio = document.createElement("input");
     const label = document.createElement("label");
+    const wrapper = document.createElement("div");
 
     radio.type = "radio";
     radio.name = "pilihan";
@@ -92,9 +93,13 @@ function checkList() {
     label.htmlFor = "radio" + i;
     label.textContent = pilihan[i];
 
-    step3.appendChild(radio);
-    step3.appendChild(label);
-    step3.appendChild(document.createElement("br"));
+    wrapper.style.display = "flex";
+    wrapper.style.alignItems = "center";
+    wrapper.style.gap = "8px";
+
+    wrapper.appendChild(radio);
+    wrapper.appendChild(label);
+    step3.appendChild(wrapper);
   }
 }
 
@@ -130,7 +135,7 @@ function showResult() {
   const semuaPilihan = pilihan.join(", ");
 
   const hasil = document.createElement("p");
-  hasil.textContent = `Halo, nama saya: ${name},  Email: ${email} saya mempunyai sejumlah ${inputJml} Pilihan yaitu ${semuaPilihan}, dan saya memilih ${selected}`;
+  hasil.textContent = `Halo, nama saya ${name},  Email saya ${email}. saya mempunyai sejumlah ${inputJml} Pilihan, yaitu ${semuaPilihan} dan saya memilih ${selected}`;
 
   step5.appendChild(hasil);
 }

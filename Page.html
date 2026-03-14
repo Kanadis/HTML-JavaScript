@@ -2,8 +2,15 @@
 <html>
   <head>
     <title>Percobaan HTML dan JavaScript</title>
+    <link rel="stylesheet" href="Style.css" />
   </head>
   <body>
+  <div class="container">
+    <h1>Kalistus Nadi</h1>
+    <h1>245314022</h1>
+    <img
+      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQw9oNqPvfg9EURKjh6wz_0aCAYPm5AYnXASA&s"
+    />
     <form>
       <div id="step1">
         <label for="Name">Nama :</label>
@@ -13,27 +20,18 @@
         <input type="number" id="jmlPilihan" class="number-spinner" min="1" />
       </div>
 
-      <br />
-
       <div id="step2"></div>
-
-      <br />
 
       <div id="step3"></div>
 
-      <br />
-
       <div id="step4"></div>
-
-      <br />
 
       <div id="step5"></div>
 
-      <br />
-
-      <div>
+      <div class = "button-container">
         <button type="button" onclick="inputOk(event)">OK</button>
       </div>
+  </div>
 
       <script src="Script.js"></script>
     </form>
